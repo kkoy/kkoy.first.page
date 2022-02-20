@@ -1,4 +1,4 @@
-const images = ["Snoopy_1.jpg", "Snoopy_3.jpg", "Snoopy_10.jpg"];
+const images = ["Snoopy_1.jpg", "Snoopy_3.jpg", "noopy_10.jpg"];
 
 const chosenImage = images[Math.floor(Math.random()*images.length)];
 // console.log(chosenImage); //html로부터 
