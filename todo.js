@@ -31,7 +31,7 @@ function paintToDo (newTodo){ //newTodo=텍스트 //newTodo를 object로 바꾸�
     const span = document.createElement("span");
     span.innerText = newTodo.text; //46줄
     const button = document.createElement("button"); //버튼만들기
-    button.innerText = "❌"; //버튼 이모지
+    button.innerText = "✔️"; //버튼 이모지
 
     button.addEventListener("click", deleteToDO)
 

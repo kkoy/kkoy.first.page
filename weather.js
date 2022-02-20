@@ -14,7 +14,21 @@ function onGeoOk(position){
           const weather= document.querySelector("#weather span:first-child");
           const city= document.querySelector("#weather span:last-child");
         city.innerText = data.name;
-        weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+        if (data.weather[0].main=== "Clouds"){
+            weather.innerText = `⛅${data.weather[0].main} 🌡 ${data.main.temp}`;
+        }else if(data.weather[0].main=== "Clear"){
+            weather.innerText = `🌞${data.weather[0].main} 🌡 ${data.main.temp}`;
+        }else if(data.weather[0].main=== "Snow"){
+            weather.innerText = `⛄${data.weather[0].main} 🌡 ${data.main.temp}`;
+        }else if(data.weather[0].main=== "Rain"){
+            weather.innerText = `☔${data.weather[0].main} 🌡 ${data.main.temp}`;
+        }else if(data.weather[0].main=== "Atmosphere"){
+            weather.innerText = `${data.weather[0].main} 🌡 ${data.main.temp}`;
+        }else if(data.weather[0].main=== "Drizzle"){
+            weather.innerText = `🌂${data.weather[0].main} 🌡 ${data.main.temp}`;
+        }else if(data.weather[0].main=== "Thunderstorm"){
+            weather.innerText = `⚡${data.weather[0].main} 🌡 ${data.main.temp}`;
+        }
     });
     //promise 당장 뭔가 일어나지 않고 시간이 좀 걸린 뒤에 일어나는 것.
 }

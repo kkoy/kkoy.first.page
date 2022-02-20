@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document App</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <div class="shape1"></div>
     <h2 id="clock">00:00:00</h2>
     <h1 id="greeting" class="hidden">
         <form class="hidden" id="login-form">
-            <input 
+            <input id="nameText"
             required
             maxlength="15"
             type="text"
             placeholder="What is your name?"
             />
-            <input type="submit" value="Log In" />
+            <input id="loginButton" type="submit" value="Log In" />
         </form>
     </h1>
     <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required/> <!--required=필수. 그래서 htmml에서 field를 보호중. 즉 아무것도 입력하지않으면 작동이 안됨?-->
+        <input id="todo" type="text" placeholder="Write Your To Do" required/> <!--required=필수. 그래서 htmml에서 field를 보호중. 즉 아무것도 입력하지않으면 작동이 안됨?-->
     </form>
     <ul id="todo-list">
         <!--<li>
@@ -30,17 +30,21 @@
     </ul>
     <div id="quote">
         <span></span> <!--인라인 요소--> <!--명언-->
-        <span></span>                   <!--작가-->
+                   <!--작가-->
     </div>
     <div id="weather">
         <span></span>
         <span></span>
     </div>
+    <h3 id="todayDate"></h3>
+    </div>
+    <h4 id="do">To-Do📋</h4>
     <script src="./greetings.js"></script>
     <script src="./clock.js"></script>
     <script src="./quotes.js"></script> <!--js 파일 import 하기-->
     <script src="./todo.js"></script>
     <script src="./weather.js"></script>
+    <script src="./background.js"></script>
+    <script src="./date.js"></script>
 </body>
-<script src="./background.js"></script>
 </html>
